@@ -539,21 +539,21 @@ footer p{font-size:.7rem;color:rgba(250,247,242,.3);letter-spacing:.05em}
       <span data-lang="es">Completa el formulario y recibirás respuesta en menos de 24 horas. Las clases son presenciales o virtuales.</span>
       <span data-lang="fr" class="il">Remplis le formulaire et tu recevras une réponse en moins de 24 heures. Les cours sont en présentiel ou en ligne.</span>
     </p>
-    <form class="agenda-form" id="agendaForm">
+    <form class="agenda-form" id="agendaForm" action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key" value="c0a79a94-7ca6-48dd-8206-48ff58ae27e4"><input type="hidden" name="subject" value="Nueva solicitud de clase - GeoYoga"><input type="hidden" name="from_name" value="GeoYoga web"><input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
       <div class="form-row">
         <div class="form-group">
           <label><span data-lang="es">Nombre completo</span><span data-lang="fr" class="il">Nom complet</span></label>
-          <input type="text" id="ag-nombre" required>
+          <input type="text" id="ag-nombre" name="nombre" required>
         </div>
         <div class="form-group">
           <label><span data-lang="es">Correo electrónico</span><span data-lang="fr" class="il">Email</span></label>
-          <input type="email" id="ag-email" required>
+          <input type="email" id="ag-email" name="email" required>
         </div>
       </div>
       <div class="form-row">
         <div class="form-group">
           <label><span data-lang="es">Tipo de clase</span><span data-lang="fr" class="il">Type de cours</span></label>
-          <select id="ag-tipo" required>
+          <select id="ag-tipo" name="tipo_clase" required>
             <option value="" disabled selected>—</option>
             <option value="GeoYoga grupal presencial">GeoYoga grupal / en groupe</option>
             <option value="GeoYoga virtual">GeoYoga virtual / en ligne</option>
@@ -629,16 +629,39 @@ function setLang(l){
 }
 document.getElementById('agendaForm').addEventListener('submit',function(e){
   e.preventDefault();
-  var n=document.getElementById('ag-nombre').value;
-  var em=document.getElementById('ag-email').value;
-  var t=document.getElementById('ag-tipo').value;
-  var f=document.getElementById('ag-fecha').value;
-  var m=document.getElementById('ag-mensaje').value;
-  var sub=encodeURIComponent('Solicitud de clase GeoYoga – '+t);
-  var bod=encodeURIComponent('Nombre: '+n+'\nCorreo: '+em+'\nTipo de clase: '+t+'\nDisponibilidad: '+f+'\n\nMensaje:\n'+m);
-  window.location.href='mailto:geoyoga369@gmail.com?subject='+sub+'&body='+bod;
-  document.getElementById('agenda-success').style.display='block';
-  this.reset();
+  var form=this;
+  var btn=form.querySelector('button[type="submit"]');
+  if(btn){btn.disabled=true;}
+  var data={
+    access_key:'c0a79a94-7ca6-48dd-8206-48ff58ae27e4',
+    subject:'Solicitud de clase GeoYoga',
+    from_name:'GeoYoga web',
+    name:document.getElementById('ag-nombre').value,
+    email:document.getElementById('ag-email').value,
+    tipo_de_clase:document.getElementById('ag-tipo').value,
+    disponibilidad:document.getElementById('ag-fecha').value,
+    mensaje:document.getElementById('ag-mensaje').value
+  };
+  fetch('https://api.web3forms.com/submit',{
+    method:'POST',
+    headers:{'Content-Type':'application/json','Accept':'application/json'},
+    body:JSON.stringify(data)
+  })
+  .then(function(r){return r.json();})
+  .then(function(res){
+    if(res.success){
+      document.getElementById('agenda-success').style.display='block';
+      form.reset();
+    }else{
+      alert("No se pudo enviar la solicitud. Inténtalo de nuevo.\nImpossible d'envoyer la demande. Réessaie.");
+    }
+  })
+  .catch(function(){
+    alert("No se pudo enviar la solicitud. Inténtalo de nuevo.\nImpossible d'envoyer la demande. Réessaie.");
+  })
+  .finally(function(){
+    if(btn){btn.disabled=false;}
+  });
 });
 </script>
 </body>
