@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El método – GeoYoga</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--sage:#7A8C6E;--sage-pale:#E8EDE4;--earth:#8B6F47;--earth-pale:#F2EAE0;--ink:#2C3028}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
+body{background:var(--earth-pale);color:rgba(44,48,40,.8);font-family:'Inter',sans-serif;font-weight:300;line-height:1.9}
+body[data-l="es"] [data-lang="fr"],body[data-l="fr"] [data-lang="es"]{display:none}
+.top{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.2rem 6vw;position:sticky;top:0;background:rgba(242,234,224,.94);z-index:5;border-bottom:1px solid rgba(122,140,110,.25)}
+.top a{color:var(--sage);text-decoration:none;font-size:.78rem;letter-spacing:.08em}
+.top a:hover{color:var(--earth)}
+.lang button{font:inherit;font-size:.72rem;letter-spacing:.1em;padding:.3rem .7rem;border:1px solid var(--sage);background:none;color:var(--sage);cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--sage);color:#fff}
+main{max-width:860px;margin:0 auto;padding:4rem 6vw 5rem}
+h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(2.4rem,6vw,3.8rem);line-height:1.1;color:var(--ink)}
+h1 em{color:var(--earth)}
+.intro{font-size:1rem;max-width:60ch;margin:1.5rem 0 3rem}
+.index{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:3.5rem}
+.index a{font-size:.78rem;color:var(--sage);text-decoration:none;border:1px solid rgba(122,140,110,.5);padding:.3rem .9rem}
+.index a:hover,.index a:focus-visible{background:var(--sage);color:#fff}
+section{background:var(--sage-pale);border-left:2px solid var(--sage);padding:2.2rem clamp(1.2rem,4vw,2.8rem);margin-bottom:2rem}
+.ico{font-size:1.5rem;color:var(--ink);display:block;margin-bottom:.6rem}
+h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(1.7rem,4vw,2.3rem);color:var(--ink);line-height:1.2}
+.lead{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.3rem;line-height:1.5;color:var(--earth);margin:.8rem 0 1.2rem;max-width:56ch}
+section p{font-size:.95rem;max-width:62ch}
+h3{font-size:.85rem;font-weight:500;color:var(--ink);margin:1.6rem 0 .4rem}
+ul{padding-left:1.1rem;max-width:62ch}
+li{font-size:.92rem;margin-bottom:.3rem}
+li::marker{color:var(--sage)}
+.cta{margin-top:3rem;text-align:left}
+.cta a{display:inline-block;margin-right:1.5rem;color:var(--sage);text-decoration:none;font-size:.82rem;letter-spacing:.08em;border-bottom:1px solid var(--sage);padding-bottom:.15rem}
+.cta a:hover{color:var(--earth);border-color:var(--earth)}
+
+.fotos{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.8rem}
+.foto{margin:0;aspect-ratio:4/3;border:1px dashed rgba(122,140,110,.65);display:flex;align-items:center;justify-content:center;text-align:center;padding:.5rem;font-size:.78rem;color:var(--sage);overflow:hidden}
+.foto.ok{border:0;padding:0}
+.foto img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:560px){.fotos{grid-template-columns:1fr}}
+:focus-visible{outline:2px solid var(--earth);outline-offset:3px}
+</style>
+</head>
+<body data-l="es">
+<header class="top">
+  <a href="index.html"><span data-lang="es">← Volver a GeoYoga</span><span data-lang="fr">← Retour à GeoYoga</span></a>
+  <div class="lang" role="group" aria-label="Idioma / Langue">
+    <button type="button" data-set="es" aria-pressed="true">ES</button><button type="button" data-set="fr" aria-pressed="false">FR</button>
+  </div>
+</header>
+<main>
+  <h1><span data-lang="es">Las cuatro puertas del <em>método</em></span><span data-lang="fr">Les quatre portes de la <em>méthode</em></span></h1>
+  <p class="intro"><span data-lang="es">GeoYoga parte de una idea: el cuerpo es una estructura geométrica viva. Estas cuatro categorías son formas de entrar en ella, desde la práctica del yoga, el movimiento y el trazo.</span><span data-lang="fr">GeoYoga part d’une idée : le corps est une structure géométrique vivante. Ces quatre catégories sont autant de manières d’y entrer, par la pratique du yoga, le mouvement et le tracé.</span></p>
+  <nav class="index" aria-label="Categorías / Catégories">
+    <a href="#geometria"><span data-lang="es">Geometría encarnada</span><span data-lang="fr">Géométrie incarnée</span></a>
+    <a href="#proporciones"><span data-lang="es">Proporciones sagradas</span><span data-lang="fr">Proportions sacrées</span></a>
+    <a href="#cartografia"><span data-lang="es">Cartografía interior</span><span data-lang="fr">Cartographie intérieure</span></a>
+    <a href="#red"><span data-lang="es">Red colectiva viva</span><span data-lang="fr">Réseau collectif vivant</span></a>
+  </nav>
+
+  <section id="geometria">
+    <span class="ico" aria-hidden="true">⬡</span>
+    <h2><span data-lang="es">Geometría encarnada</span><span data-lang="fr">Géométrie incarnée</span></h2>
+    <p class="lead"><span data-lang="es">Las formas universales —el círculo, la espiral, el triángulo— dejan de ser dibujos y se viven con el cuerpo.</span><span data-lang="fr">Les formes universelles — le cercle, la spirale, le triangle — cessent d’être des dessins et se vivent avec le corps.</span></p>
+    <p><span data-lang="es">Aquí el cuerpo es el compás. Las formas se estudian desde dentro: cómo se siente una espiral en la columna, un triángulo en las piernas o un círculo en la respiración. Las posturas de yoga (asanas) se leen como figuras con ángulos, ejes y simetrías.</span><span data-lang="fr">Ici, le corps est le compas. Les formes s’étudient de l’intérieur : comment on ressent une spirale dans la colonne, un triangle dans les jambes ou un cercle dans la respiration. Les postures de yoga (asanas) se lisent comme des figures aux angles, axes et symétries.</span></p>
+    <h3><span data-lang="es">En la práctica</span><span data-lang="fr">En pratique</span></h3>
+    <ul data-lang="es"><li>Trazar figuras en el suelo y recorrerlas con el cuerpo.</li><li>Observar ángulos y simetrías en posturas como el triángulo, el perro boca abajo o el árbol.</li><li>Construir un mandala vivo entre varias personas.</li></ul>
+    <ul data-lang="fr"><li>Tracer des figures au sol et les parcourir avec le corps.</li><li>Observer angles et symétries dans des postures comme le triangle, le chien tête en bas ou l’arbre.</li><li>Construire un mandala vivant à plusieurs.</li></ul>
+    <div class="fotos" data-slot="geometria">
+      <figure class="foto"><span><span data-lang="es">Aquí irá tu foto 1</span><span data-lang="fr">Ta photo 1 ira ici</span></span></figure>
+      <figure class="foto"><span><span data-lang="es">Aquí irá tu foto 2</span><span data-lang="fr">Ta photo 2 ira ici</span></span></figure>
+    </div>
+  </section>
+
+  <section id="proporciones">
+    <span class="ico" aria-hidden="true">φ</span>
+    <h2><span data-lang="es">Proporciones sagradas</span><span data-lang="fr">Proportions sacrées</span></h2>
+    <p class="lead"><span data-lang="es">El cuerpo como unidad de medida: su relación con el número áureo y la simetría.</span><span data-lang="fr">Le corps comme unité de mesure : son rapport avec le nombre d’or et la symétrie.</span></p>
+    <p><span data-lang="es">Con un hilo de lana se miden distancias propias (de la coronilla al corazón, del esternón al ombligo, de la yema de los dedos al codo) y se observa si se acercan a la proporción áurea (≈ 1,618). No se trata de demostrar nada, sino de mirar el propio cuerpo con curiosidad, como el hombre de Vitruvio.</span><span data-lang="fr">Avec un fil de laine, on mesure ses propres distances (du sommet du crâne au cœur, du sternum au nombril, du bout des doigts au coude) et on observe si elles s’approchent du nombre d’or (≈ 1,618). Il ne s’agit pas de démontrer, mais de regarder son corps avec curiosité, comme l’homme de Vitruve.</span></p>
+    <h3><span data-lang="es">En la práctica</span><span data-lang="fr">En pratique</span></h3>
+    <ul data-lang="es"><li>Medir segmentos del cuerpo con hilo y cinta.</li><li>Comparar proporciones con el número áureo y la sucesión de Fibonacci.</li><li>Sentir ejes, puntos de apoyo y simetría bilateral en las posturas.</li></ul>
+    <ul data-lang="fr"><li>Mesurer des segments du corps avec fil et mètre ruban.</li><li>Comparer les proportions au nombre d’or et à la suite de Fibonacci.</li><li>Ressentir axes, points d’appui et symétrie bilatérale dans les postures.</li></ul>
+    <div class="fotos" data-slot="proporciones">
+      <figure class="foto"><span><span data-lang="es">Aquí irá tu foto 1</span><span data-lang="fr">Ta photo 1 ira ici</span></span></figure>
+      <figure class="foto"><span><span data-lang="es">Aquí irá tu foto 2</span><span data-lang="fr">Ta photo 2 ira ici</span></span></figure>
+    </div>
+  </section>
+
+  <section id="cartografia">
+    <span class="ico" aria-hidden="true">◎</span>
+    <h2><span data-lang="es">Cartografía interior</span><span data-lang="fr">Cartographie intérieure</span></h2>
+    <p class="lead"><span data-lang="es">El espacio interno del cuerpo se explora como un territorio geométrico.</span><span data-lang="fr">L’espace intérieur du corps s’explore comme un territoire géométrique.</span></p>
+    <p><span data-lang="es">Con la respiración, la visualización y el dibujo se perciben formas dentro del cuerpo: puntos, líneas, volúmenes, espirales. Después se llevan al papel o al espacio, para que lo vivido quede trazado. Es una práctica cercana a la poética del espacio de Bachelard y a la visualización propia del yoga.</span><span data-lang="fr">Par la respiration, la visualisation et le dessin, on perçoit des formes à l’intérieur du corps : points, lignes, volumes, spirales. On les porte ensuite sur le papier ou dans l’espace, pour que le vécu soit tracé. Une pratique proche de la poétique de l’espace de Bachelard et de la visualisation propre au yoga.</span></p>
+    <h3><span data-lang="es">En la práctica</span><span data-lang="fr">En pratique</span></h3>
+    <ul data-lang="es"><li>Visualizar figuras (triángulo, hexágono, espiral) y ubicarlas en el cuerpo.</li><li>Dibujar o escribir lo sentido en un cuaderno de figuras.</li><li>Trazar en el espacio, con el cuerpo, las figuras percibidas.</li></ul>
+    <ul data-lang="fr"><li>Visualiser des figures (triangle, hexagone, spirale) et les situer dans le corps.</li><li>Dessiner ou écrire le ressenti dans un carnet de figures.</li><li>Tracer dans l’espace, avec le corps, les figures perçues.</li></ul>
+    <div class="fotos" data-slot="cartografia">
+      <figure class="foto"><span><span data-lang="es">Aquí irá tu foto 1</span><span data-lang="fr">Ta photo 1 ira ici</span></span></figure>
+      <figure class="foto"><span><span data-lang="es">Aquí irá tu foto 2</span><span data-lang="fr">Ta photo 2 ira ici</span></span></figure>
+    </div>
+  </section>
+
+  <section id="red">
+    <span class="ico" aria-hidden="true">✦</span>
+    <h2><span data-lang="es">Red colectiva viva</span><span data-lang="fr">Réseau collectif vivant</span></h2>
+    <p class="lead"><span data-lang="es">Cuando varios cuerpos se conectan, aparece una geometría nueva: la de la relación.</span><span data-lang="fr">Quand plusieurs corps se relient, une géométrie nouvelle apparaît : celle de la relation.</span></p>
+    <p><span data-lang="es">Las articulaciones —muñecas, codos, rodillas— se trabajan como nudos que se unen con los de otras personas. Con hilos tensados entre los cuerpos se sienten tensiones y equilibrios, y se forman triángulos, hexágonos, estrellas o mandalas vivos que cambian con el aliento y el movimiento. Cada cuerpo es un nudo de una trama común.</span><span data-lang="fr">Les articulations — poignets, coudes, genoux — se travaillent comme des nœuds qui se relient à ceux des autres. Avec des fils tendus entre les corps, on sent tensions et équilibres, et l’on forme triangles, hexagones, étoiles ou mandalas vivants qui évoluent avec le souffle et le mouvement. Chaque corps est un nœud d’une trame commune.</span></p>
+    <h3><span data-lang="es">En la práctica</span><span data-lang="fr">En pratique</span></h3>
+    <ul data-lang="es"><li>Crear nudos de a dos entre manos, codos o rodillas.</li><li>Tensar hilos entre varias personas para formar figuras.</li><li>Dejar que la figura cambie con la respiración y el movimiento.</li></ul>
+    <ul data-lang="fr"><li>Créer des nœuds à deux entre mains, coudes ou genoux.</li><li>Tendre des fils entre plusieurs personnes pour former des figures.</li><li>Laisser la figure évoluer avec la respiration et le mouvement.</li></ul>
+    <div class="fotos" data-slot="red">
+      <figure class="foto"><span><span data-lang="es">Aquí irá tu foto 1</span><span data-lang="fr">Ta photo 1 ira ici</span></span></figure>
+      <figure class="foto"><span><span data-lang="es">Aquí irá tu foto 2</span><span data-lang="fr">Ta photo 2 ira ici</span></span></figure>
+    </div>
+  </section>
+
+  <p class="cta"><a href="index.html#agendar"><span data-lang="es">Agendar clase</span><span data-lang="fr">Réserver un cours</span></a><a href="index.html"><span data-lang="es">Volver al inicio</span><span data-lang="fr">Retour à l’accueil</span></a></p>
+</main>
+<script>
+(function(){
+  var b=document.body,btns=document.querySelectorAll('.lang button');
+  function set(l){
+    b.setAttribute('data-l',l);document.documentElement.lang=l;
+    btns.forEach(function(x){x.setAttribute('aria-pressed',x.getAttribute('data-set')===l?'true':'false');});
+    try{localStorage.setItem('geoyoga-lang',l);}catch(e){}
+  }
+  var s='es';
+  try{s=localStorage.getItem('geoyoga-lang')||(location.hash==='#fr'?'fr':'es');}catch(e){}
+  set(s==='fr'?'fr':'es');
+  btns.forEach(function(x){x.addEventListener('click',function(){set(x.getAttribute('data-set'));});});
+
+  document.querySelectorAll('.fotos').forEach(function(box){
+    var name=box.getAttribute('data-slot'),exts=['jpg','jpeg','png','webp'];
+    box.querySelectorAll('.foto').forEach(function(fig,i){
+      (function next(k){
+        if(k>=exts.length)return;
+        var im=new Image();
+        im.onload=function(){fig.innerHTML='';fig.appendChild(im);fig.classList.add('ok');};
+        im.onerror=function(){next(k+1);};
+        im.alt='GeoYoga';
+        im.src=name+'-'+(i+1)+'.'+exts[k];
+      })(0);
+    });
+  });
+})();
+</script>
+</body>
+</html>
