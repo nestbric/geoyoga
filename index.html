@@ -92,6 +92,9 @@ section{padding:6rem 6vw}
 .metodo-text p{font-size:.93rem;line-height:1.9;color:rgba(44,48,40,.75);margin-bottom:1.1rem}
 .metodo-pillars{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
 .pillar{padding:1.5rem;border:.5px solid rgba(122,140,110,.2);background:var(--sage-pale);position:relative;overflow:hidden}
+     .pillar[role="link"]{cursor:pointer;transition:transform .25s,box-shadow .25s}
+   .pillar[role="link"]:hover,.pillar[role="link"]:focus-visible{transform:translateY(-3px);box-shadow:0 8px 20px rgba(44,48,40,.1)}
+   .pillar[role="link"] h4::after{content:' →';color:var(--sage)}
 .pillar::after{content:'';position:absolute;bottom:-20px;right:-20px;width:60px;height:60px;opacity:.08}
 .pillar-icon{font-size:1.4rem;margin-bottom:.9rem;display:block}
 .pillar h4{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:400;color:var(--sage);margin-bottom:.5rem}
@@ -319,25 +322,25 @@ footer p{font-size:.7rem;color:rgba(250,247,242,.3);letter-spacing:.05em}
       <p data-lang="fr">Développé au sein du <strong>Laboratoire Phi</strong> sous le concept de <em>Phignosis</em> — connaissance incarnée à travers le mouvement et les tracés sacrés —, GeoYoga relie science, art et spiritualité.</p>
     </div>
     <div class="metodo-pillars">
-      <div class="pillar">
+         <div class="pillar" role="link" tabindex="0" onclick="location.href='metodo.html#geometria'" onkeydown="if(event.key==='Enter'){location.href='metodo.html#geometria'}">
         <span class="pillar-icon">⬡</span>
         <h4><span data-lang="es">Geometría incarnada</span><span data-lang="fr" class="il">Géométrie incarnée</span></h4>
         <p data-lang="es">Poliedros, espirales y círculos vividos y sentidos por el cuerpo en movimiento.</p>
         <p data-lang="fr">Polyèdres, spirales et cercles vécus et ressentis par le corps en mouvement.</p>
       </div>
-      <div class="pillar">
+         <div class="pillar" role="link" tabindex="0" onclick="location.href='metodo.html#proporciones'" onkeydown="if(event.key==='Enter'){location.href='metodo.html#proporciones'}">
         <span class="pillar-icon">φ</span>
         <h4><span data-lang="es">Proporciones sagradas</span><span data-lang="fr" class="il">Proportions sacrées</span></h4>
         <p data-lang="es">Número áureo, Fibonacci y simetrías naturales en las posturas de yoga.</p>
         <p data-lang="fr">Nombre d'or, Fibonacci et symétries naturelles dans les postures de yoga.</p>
       </div>
-      <div class="pillar">
+         <div class="pillar" role="link" tabindex="0" onclick="location.href='metodo.html#cartografia'" onkeydown="if(event.key==='Enter'){location.href='metodo.html#cartografia'}">
         <span class="pillar-icon">◎</span>
         <h4><span data-lang="es">Cartografía interior</span><span data-lang="fr" class="il">Cartographie intérieure</span></h4>
         <p data-lang="es">El espacio interno del cuerpo como territorio geométrico. Visualización y tracé en el espacio.</p>
         <p data-lang="fr">L'espace intérieur du corps comme territoire géométrique. Visualisation et tracé dans l'espace.</p>
       </div>
-      <div class="pillar">
+         <div class="pillar" role="link" tabindex="0" onclick="location.href='metodo.html#red'" onkeydown="if(event.key==='Enter'){location.href='metodo.html#red'}">
         <span class="pillar-icon">✦</span>
         <h4><span data-lang="es">Red colectiva viva</span><span data-lang="fr" class="il">Réseau collectif vivant</span></h4>
         <p data-lang="es">Figuras creadas entre varios cuerpos, tejiendo una trama de geometría dinámica y relacional.</p>
