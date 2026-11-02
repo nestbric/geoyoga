@@ -139,7 +139,7 @@ section{padding:6rem 6vw}
 /* SOBRE */
 .sobre{background:var(--earth-pale)}
 .sobre-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1.5fr;gap:5rem;align-items:start}
-.sobre-foto-wrap{position:relative;z-index:1}
+.sobre-foto-wrap{position:relative;z-index:1;max-width:260px}
 .sobre-foto-wrap img{width:100%;display:block;filter:brightness(.93) saturate(.85)}
 .sobre-foto-frame{position:absolute;top:-1rem;left:-1rem;right:1rem;bottom:1rem;border:1px solid rgba(184,147,90,.35);pointer-events:none;z-index:0}
 .sobre-text .intro{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:300;font-style:italic;color:var(--earth);margin-bottom:1.5rem;line-height:1.65}
@@ -216,6 +216,7 @@ footer p{font-size:.7rem;color:rgba(250,247,242,.3);letter-spacing:.05em}
 
 @media(max-width:800px){
   .metodo-grid,.sobre-inner{grid-template-columns:1fr;gap:2.5rem}
+    .sobre-foto-wrap{max-width:220px;margin:0 auto}
   .servicios-grid{grid-template-columns:1fr 1fr}
   .foto-row-3{grid-template-columns:1fr 1fr}
   .foto-row-1{grid-template-columns:1fr}
@@ -423,7 +424,7 @@ footer p{font-size:.7rem;color:rgba(250,247,242,.3);letter-spacing:.05em}
   <div class="sobre-inner">
     <div class="sobre-foto-wrap">
       <div class="sobre-foto-frame"></div>
-      <img src="GuerreroII.png" alt="Néstor Briceño Estepa – creador de GeoYoga">
+      <img src="nestor-briceno-estepa.jpg" alt="Néstor Briceño Estepa – creador de GeoYoga">
     </div>
     <div class="sobre-text">
       <p class="section-label"><span data-lang="es">El instructor</span><span data-lang="fr" class="il">L'instructeur</span></p>
